@@ -14,9 +14,15 @@ Files needed from this repo:
 Files needed from this repo:
 * Geometrically_Extract_Dimensions_with_Word2Vec.ipynb
 
-## Part 2B: Try another (slightly twist) Geometric Approach to measure bias
+
+
+
+## Part 2B: Try another Geometric Approach (a slight twist)  to measure bias
 Files needed from this repo:
 * 
+
+
+
 
 ## Part 2C: Try a Machine-Learning Classifier instead of a Geometic approch to measure bias
 Files needed from this repo:
