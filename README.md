@@ -1,7 +1,6 @@
 # Word2Vec-bias-extraction
 
-All code written with Python 3 on Windows Machine, and checked as of 3/13/2018. In progress. 
-
+All code written with Python 3 on Windows Machine, and checked as of 3/13/2018, some changes to Gensim Word2Vec since then that need to be updated. IN PROGRESS. 
 
 ## Part 1:  Train Word2Vec Model, Evaluate Performance and Explore
 Files needed from this repo:
@@ -31,6 +30,7 @@ Methods are inspired by Bolukbasi et. al. 2016 (https://arxiv.org/abs/1607.06520
 ## Part 2B: Try another Geometric Approach 
 Files needed from this repo:
 
+* Geometrically_Extract_Dimensions_with_Word2Vec-AlternateApproach.ipynp
 
 **Description:** This modifies the methods used in Part 2A (which were proposed by Bolukbasi et al. 2016) to extract directions a slightly different way. This method is more flexible to a variety of training-words to extract directions, than that used in Part 2A. 
 
@@ -38,6 +38,8 @@ Files needed from this repo:
 ## Part 2C: Try a Machine-Learning Classifier instead of a Geometic approch to measure bias
 Files needed from this repo:
 
+* SVM, Dec Tree ExperimentClassification.ipynb
+* Classification Alternate Strategy- Extract WordVectors for ML and Neural Net Experimenting.ipynp
 
 **Description:** This is code for a totally different way to measure the biases learned by a Word2Vec model, now using a machine-learning classifier rather than a geometric approach. The disadvantage to this appraoch compared to those in Part 2A and Part 2B is that machine-learning models tend to be way overparametrized, since there are few training examples (words-vectors) compared to the number of features for each word-vector (dimensions in a Word2Vec models tend to range from 50-500). Still, it is a way to check biases results in Part 2A and 2B.  
 
