@@ -1,6 +1,6 @@
 # Word2Vec-bias-extraction
 
-All code written with Python 3 on Windows Machine, and checked as of 3/13/2018, some changes to Gensim Word2Vec since then that need to be updated. IN PROGRESS PLEASE DO NOT CITE. 
+All code written with Python 3 on Windows. Some changes to Gensim Word2Vec since then that need to be updated. IN PROGRESS PLEASE DO NOT CITE. 
 
 ## Part A:  Train Word2Vec Model, Evaluate Performance and Explore
 Files needed from this repo:
