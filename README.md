@@ -22,7 +22,7 @@ This notebook explores how a language model (Word2Vec) **learns words with respe
 * Dimensions in this juypter notebook that are ready for extraction are **gender, morality, health,** and **ses**. Code is modifiable to extract other dimensions that may be interesting: you will need to adjust the training/testing words and corresponding labels. 
 * This code is written for use with Word2Vec models, modifiable for other word-vector models as well. 
 
-For the original application of these methods to gender biases see [Bolukbasi et. al. 2016](https://arxiv.org/abs/1607.06520).
+Using methods inspired to detect gender biases by [Bolukbasi et. al. 2016](https://arxiv.org/abs/1607.06520).
 
 
 
@@ -33,8 +33,9 @@ Files needed from this repo:
 
 **Description:** This modifies the methods used in Part B (which were proposed by Bolukbasi et al. 2016) to extract dimensions a slightly different way. This method is more flexible to a variety of training-words to extract directions, than that used in Part B. Please see Part B for motivation and explanation. 
 
+Using methods inspired by [Larsen et. al. 2016](https://arxiv.org/abs/1512.09300?context=cs)
 
-## Part D: Try a Machine-Learning Classifier instead of a Geometic approch to measure bias
+## Part D: Try a Machine-Learning Classifier instead of a Geometic Approch
 Files needed from this repo:
 
 * SVM, Dec Tree ExperimentClassification.ipynb
