@@ -17,7 +17,7 @@ Files needed from this repo:
 
 **Description:** ""Dimension," "direction" and "subspace" are used in this notebook interchangeably to refer to a vector that captures a bipolar concept such as gender which is often portrayed as ranging continuosly from hypermasculine to hyperfeminine, or socioeconomic status (SES) which ranges from poor to rich. 
 
-This notebook explores how a language model (Word2Vec) **learns words with respect to these dimensions.** Word2Vec models words as numeric vectors, for a review of Word2Vec check out this [blog post](http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/). We classify a word-vector by first finding the dimension (like gender), and then projecting the word-vector onto the vector representing the dimension. We get a scalar that corresponds to how far the word-vector lies at one end of the diemsnion or anotehr (e.g., how masculine or feminine the word-vector is).
+This notebook explores how a language model (Word2Vec) **learns words with respect to these dimensions.** Word2Vec models words as numeric vectors, for a review of Word2Vec check out this [blog post](http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/). We classify a word-vector by first finding the dimension (like gender), and then projecting the word-vector onto the vector representing the dimension. We get a scalar that corresponds to how far the word-vector lies at one end of the dimension or another (e.g., how masculine or feminine the word-vector is).
 * To use gender as an example - a larger, positive projection of a word onto the gender dimension suggests this word is learned as highly feminine, while a larger, negative projection of a word onto the gender dimension suggests that this word is learned as highly masculine. A word with a projection near zero suggests that Word2Vec learned this word as gender-neutral. 
 * Dimensions in this juypter notebook that are ready for extraction are **gender, morality, health,** and **ses**. Code is modifiable to extract other dimensions that may be interesting: you will need to adjust the training/testing words and corresponding labels. 
 * This code is written for use with Word2Vec models, modifiable for other word-vector models as well. 
@@ -29,7 +29,7 @@ For the original application of these methods to gender biases see [Bolukbasi et
 ## Part C: Try another Geometric Approach 
 Files needed from this repo:
 
-* Geometrically_Extract_Dimensions_with_Word2Vec-AlternateApproach.ipynp
+* Part_C_Larsen_W2V_Dimension_Extraction.ipynb
 
 **Description:** This modifies the methods used in Part B (which were proposed by Bolukbasi et al. 2016) to extract dimensions a slightly different way. This method is more flexible to a variety of training-words to extract directions, than that used in Part B. Please see Part B for motivation and explanation. 
 
