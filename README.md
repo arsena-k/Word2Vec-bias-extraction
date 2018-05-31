@@ -1,6 +1,6 @@
 # Word2Vec-bias-extraction
 
-All code written with Python 3 on Windows. Some changes to Gensim Word2Vec since then that need to be updated. IN PROGRESS PLEASE DO NOT CITE. 
+Notebook to accompany paper in preparation by Arseniev-Koehler and Foster. Code written in Python 3 in Windows. Please do not cite or reuse this code yet. This code is still in preparation and may contain errors. 
 
 ## Part A:  Train Word2Vec Model, Evaluate Performance and Explore
 Files needed from this repo:
@@ -9,7 +9,7 @@ Files needed from this repo:
 * questions_words_pasted.txt
 * questions_words.txt
 
-**Description:** This code is for training a Word2Vec model using Gensim, including suggested hyperparamters. Code is also included for evaluating model quality on the Google Analogy Test. Some suggested ways to explore the model are also included. 
+**Description:** This code is for training a Word2Vec model using Gensim, including suggested hyperparameters. Code is also included for evaluating model quality on the Google Analogy Test. Some suggested ways to explore the model are also included. 
 
 ## Part B: Try a Geometric Approach to measure bias inspired by Bolukbasi et al 2016
 Files needed from this repo:
@@ -23,7 +23,6 @@ This notebook explores how a language model (Word2Vec) **learns words with respe
 * This code is written for use with Word2Vec models, modifiable for other word-vector models as well. 
 
 Using methods inspired to detect gender biases by [Bolukbasi et. al. 2016](https://arxiv.org/abs/1607.06520).
-
 
 
 ## Part C: Try another Geometric Approach 
@@ -41,7 +40,7 @@ Files needed from this repo:
 * SVM, Dec Tree ExperimentClassification.ipynb
 * Classification Alternate Strategy- Extract WordVectors for ML and Neural Net Experimenting.ipynp
 
-**Description:** This is code for a totally different way to measure the biases learned by a Word2Vec model, now using a machine-learning classifier rather than a geometric approach. The disadvantage to this appraoch compared to those in Part B and Part C is that machine-learning models tend to be way overparametrized, since there are few training examples (words-vectors) compared to the number of features for each word-vector (dimensions in a Word2Vec models tend to range from 50-500). Still, it is a way to check biases results in Part B and C. Please see Part B for motivation and explanation. 
+**Description:** This is code for a totally different way to extract dimensions and measure the biases learned by a Word2Vec model, now using a machine-learning classifier rather than a geometric approach. The disadvantage to this approach compared to those in Part B and Part C is that machine-learning models tend to be way overparametrized for this task, since there are few training examples (word-vectors) compared to the number of features for each word-vector (dimensions in a Word2Vec models tend to range from 50-500). Still, it is a way to check biases results in Part B and C. Please see Part B for additional motivation and explanation. 
 
 
 
