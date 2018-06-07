@@ -4,7 +4,7 @@ Notebook to accompany paper in preparation by Arseniev-Koehler and Foster. Code 
 
 ## Part A:  Train Word2Vec Model, Evaluate Performance and Explore
 Files needed from this repo:
-* Word2Vec_training_performance_exploring.ipynb
+* Part_A_W2V_training_performance_exploring.ipynb
 * testing.py
 * questions_words_pasted.txt
 * questions_words.txt
@@ -13,7 +13,7 @@ Files needed from this repo:
 
 ## Part B: Try a Geometric Approach to measure bias inspired by Bolukbasi et al 2016
 Files needed from this repo:
-* Geometrically_Extract_Dimensions_with_Word2Vec.ipynb
+* Part_B_Bolukbasi_W2V_Dimension_Extraction.ipynb
 
 **Description:** ""Dimension," "direction" and "subspace" are used in this notebook interchangeably to refer to a vector that captures a bipolar concept such as gender which is often portrayed as ranging continuosly from hypermasculine to hyperfeminine, or socioeconomic status (SES) which ranges from poor to rich. 
 
