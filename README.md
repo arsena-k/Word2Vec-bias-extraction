@@ -21,7 +21,7 @@ Files needed from this repo:
 
 **Description:** This code is for training a Word2Vec model using Gensim, including suggested hyperparameters. Code is also included for evaluating model quality on the Google Analogy Test. Some suggested ways to explore the model are also included. Word2Vec models words in a text dataset as numeric vectors. For a review of Word2Vec check out this [blog post](http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/). 
 
-## Part B: Try a Geometric Approach to measure bias inspired by Bolukbasi et al 2016
+## Part B: Try an approach to measure bias inspired by Bolukbasi et al 2016
 Files needed from this repo:
 * Part_B_Bolukbasi_W2V_Dimension_Extraction.ipynb
 
@@ -35,7 +35,7 @@ This notebook explores how Word2Vec model of language **learns words with respec
 Using methods inspired to detect gender biases by [Bolukbasi et. al. 2016](https://arxiv.org/abs/1607.06520).
 
 
-## Part C: Try another Geometric Approach 
+## Part C: Try another approach to measure bias inspired by Larsen et al 2016
 Files needed from this repo:
 
 * Part_C_Larsen_W2V_Dimension_Extraction.ipynb
@@ -44,7 +44,7 @@ Files needed from this repo:
 
 Using methods inspired by [Larsen et. al. 2016](https://arxiv.org/abs/1512.09300?context=cs)
 
-## Part D: Try a Machine-Learning Classifier instead of a Geometic Approch
+## Part D: Try a Machine-Learning Classifier Approach (a Support Vector Machine)
 Files needed from this repo:
 
 * SVM, Dec Tree ExperimentClassification.ipynb
