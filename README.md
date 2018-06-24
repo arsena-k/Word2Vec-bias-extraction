@@ -1,16 +1,16 @@
 # Word2Vec-bias-extraction
 
-*Notebook to accompany paper in preparation by Arseniev-Koehler and Foster. Code written in Python 3 in Windows. Please do not cite or reuse this code yet. This code is still in preparation and may contain errors.*
+*GitHub repository to accompany paper in preparation by Arseniev-Koehler and Foster, "Teaching an algorithm what it means to be fat: machine-learning as a model for cultural learning." Please cite this repository or paper if reused. Code written in Python 3 in Windows. 
 
 This project explores **how language in the news is loaded with meanings of gender, morality, healthiness, and socio-economic status (SES)**. For example, which words are more masculine or feminine? Are certain words loaded with meanings of immorality or morality? 
 
 We develop and then train models to classify words with respect to each of these four dimensions (gender, morality, healthiness, and SES) on a set of training words. Then, we test model performances on a fresh set of testing words. 
 
-Finally, we look at how language about body weight, such as "obese" and "slender,"  to see how these words are connoted with gender, morality, health, and social class. You might use this code to look at meanings of language in other arenas too - such as occupations, academic disciplines, or food. You might also extend this code to other types of meaning, or to other data sources. 
+Finally, we examine language about body weight, such as "obese" and "slender,"  to see how obesity-related lexicon is connoted with gender, morality, health, and social class. 
 
-We include three possible modeling frameworks in Part B, C, and D. Developing three unique models enables us to check to robustness of our assumptions and empirical findings. We also include multiple other robustness checks along the way. 
+We include three possible modeling frameworks for modeling these dimensions (in parts B, C, and D). Developing three unique models enables us to check to robustness of our assumptions and empirical findings. We also include multiple other robustness checks along the way. 
 
-Whichever model framework you choose, we begin by feeding in a trained Word2Vec Model in the dataset we want to explore. In the Jupyter notebook for each of Part B, C and D, we suggest a pre-trained model on GoogleNews if you don't have one. OR, see [Part A](https://github.com/arsena-k/Word2Vec-bias-extraction) of this project for a tutorial on training your own Word2Vec model. If you are unfamiliar with text analysis or Word2Vec, start with Part A! 
+For all modeling frameworks, we feed in a trained Word2Vec Model on New York Times. In the Jupyter notebook for each of Part B, C and D, we suggest a pre-trained model on GoogleNews if you don't have one. OR, see [Part A](https://github.com/arsena-k/Word2Vec-bias-extraction) of this project for a tutorial on training your own Word2Vec model. If you are unfamiliar with text analysis or Word2Vec, start with Part A! 
 
 ## Part A:  Modeling Language with Word2Vec: Train a Word2Vec Model
 Files needed from this repo:
@@ -19,7 +19,7 @@ Files needed from this repo:
 * questions_words_pasted.txt
 * questions_words.txt
 
-**Description:** This code is for training a Word2Vec model using Gensim, including suggested hyperparameters. Code is also included for evaluating model quality on the Google Analogy Test. Some suggested ways to explore the model are also included. Word2Vec models words in a text dataset as numeric vectors. For a review of Word2Vec check out this [blog post](http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/). 
+**Description:** In Part A, we train a Word2Vec model of text data using Gensim.  Word2Vec models words in a text dataset as numeric vectors. For a review of Word2Vec check out this [blog post](http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/). We also include code in this juputer notebook to evaluate model quality on the Google Analogy Test on any trained Word2Vec model, and explore any trained Word2Vec model.
 
 ## Part B: Try an approach to measure bias inspired by Bolukbasi et al 2016
 Files needed from this repo:
