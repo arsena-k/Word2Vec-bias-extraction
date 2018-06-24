@@ -19,7 +19,7 @@ Files needed from this repo:
 * questions_words_pasted.txt
 * questions_words.txt
 
-Files needed from [OSF](https://osf.io/jvarx/):
+Files needed from [OSF](https://osf.io/jvarx/files/):
 
 
 **Description:** In Part A, we train a Word2Vec model of text data using Gensim.  Word2Vec models words in a text dataset as numeric vectors. For a review of Word2Vec check out this [blog post](http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/). We also include code in this juputer notebook to evaluate model quality on the Google Analogy Test on any trained Word2Vec model, and explore any trained Word2Vec model.
@@ -28,7 +28,7 @@ Files needed from [OSF](https://osf.io/jvarx/):
 Files needed from this repo:
 * Part_B_Bolukbasi_W2V_Dimension_Extraction.ipynb
 
-Files needed from [OSF](https://osf.io/jvarx/):
+Files needed from [OSF](https://osf.io/jvarx/files/):
  
 
 **Description:** ""Dimension," "direction" and "subspace" are used in this notebook interchangeably to refer to a vector that captures a bipolar concept such as gender which is often portrayed as ranging continuosly from hypermasculine to hyperfeminine, or socioeconomic status (SES) which ranges from poor to rich. 
@@ -45,7 +45,7 @@ Using methods inspired to detect gender biases by [Bolukbasi et. al. 2016](https
 Files needed from this repo:
 * Part_C_Larsen_W2V_Dimension_Extraction.ipynb
 
-Files needed from [OSF](https://osf.io/jvarx/):
+Files needed from [OSF](https://osf.io/jvarx/files/):
  
 
 **Description:** This modifies the methods used in Part B (which were proposed by Bolukbasi et al. 2016) to extract dimensions a slightly different way. This method is more flexible to a variety of training-words to extract directions, than that used in Part B. Please see Part B for motivation and explanation. 
@@ -57,7 +57,7 @@ Files needed from this repo:
 * SVM, Dec Tree ExperimentClassification.ipynb
 * Classification Alternate Strategy- Extract WordVectors for ML and Neural Net Experimenting.ipynp
 
-Files needed from [OSF](https://osf.io/jvarx/):
+Files needed from [OSF](https://osf.io/jvarx/files/):
  
 
 **Description:** This is code for a totally different way to extract dimensions and measure the biases learned by a Word2Vec model, now using a machine-learning classifier rather than a geometric approach. The disadvantage to this approach compared to those in Part B and Part C is that machine-learning models tend to be way overparametrized for this task, since there are few training examples (word-vectors) compared to the number of features for each word-vector (dimensions in a Word2Vec models tend to range from 50-500). Still, it is a way to check biases results in Part B and C. Please see Part B for additional motivation and explanation. 
