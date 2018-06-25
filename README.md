@@ -10,7 +10,7 @@ Finally, we examine language about body weight, such as "obese" and "slender,"  
 
 We include three possible modeling frameworks for modeling these dimensions (in parts B, C, and D). Developing three unique models enables us to check to robustness of our assumptions and empirical findings. We also include multiple other robustness checks along the way. 
 
-For all modeling frameworks, we feed in a trained Word2Vec Model on New York Times. In the Jupyter notebook for each of Part B, C and D, we suggest a pre-trained model on GoogleNews if you don't have one. OR, see [Part A](https://github.com/arsena-k/Word2Vec-bias-extraction) of this project for a tutorial on training your own Word2Vec model. If you are unfamiliar with text analysis or Word2Vec, start with Part A! 
+For all modeling frameworks, we feed in a trained Word2Vec model on New York Times (in the code, you be pointed to where to download). In the Jupyter notebook for each of Part B, C and D, we also suggest a pre-trained model on GoogleNews. See [Part A](https://github.com/arsena-k/Word2Vec-bias-extraction) of this project for a tutorial on training and exploring your own Word2Vec model. If you are unfamiliar with text analysis or Word2Vec, start with Part A. 
 
 ## Part A:  Modeling Language with Word2Vec: Train a Word2Vec Model
 Files needed from this repo:
@@ -42,7 +42,6 @@ This notebook explores how Word2Vec model of language **learns words with respec
 
 Using methods inspired to detect gender biases by [Bolukbasi et. al. 2016](https://arxiv.org/abs/1607.06520).
 
-
 ## Part C: Try another approach to measure bias inspired by Larsen et al 2016
 Files needed from this repo:
 * Part_C_Larsen_W2V_Dimension_Extraction.ipynb
@@ -57,7 +56,8 @@ Using methods inspired by [Larsen et. al. 2016](https://arxiv.org/abs/1512.09300
 
 ## Part D: Try a Machine-Learning Classifier Approach (a Support Vector Machine)
 Files needed from this repo:
-* 
+* Part_D_MachineLearning_W2V_Dimension_Extraction.ipynb
+* helpers_partD.py
 
 Files needed from [OSF](https://osf.io/jvarx/files/):
  * modelA_ALLYEARS_300dim_10CW     *note this model is different (lower-dimensional word-vectors) from the one used on Part A, B and C
