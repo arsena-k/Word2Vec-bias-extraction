@@ -1,6 +1,6 @@
 # Word2Vec-bias-extraction
 
-*GitHub repository to accompany paper in preparation by Arseniev-Koehler and Foster, "Teaching an algorithm what it means to be fat: machine-learning as a model for cultural learning." Please cite this repository or paper if reused. Code written in Python 3 in Windows.* 
+*GitHub repository to accompany research article in preparation by Arseniev-Koehler and Foster, "Teaching an algorithm what it means to be fat: machine-learning as a model for cultural learning." Please cite this repository or paper if reused. Code written in Python 3 in Windows.* 
 
 This project explores **how language in the news is loaded with meanings of gender, morality, healthiness, and socio-economic status (SES)**. For example, which words are more masculine or feminine? Are certain words loaded with meanings of immorality or morality? 
 
