@@ -1,6 +1,6 @@
 # Word2Vec-bias-extraction
 
-*GitHub repository to accompany paper in preparation by Arseniev-Koehler and Foster, "Teaching an algorithm what it means to be fat: machine-learning as a model for cultural learning." Please cite this repository or paper if reused. Code written in Python 3 in Windows. 
+*GitHub repository to accompany paper in preparation by Arseniev-Koehler and Foster, "Teaching an algorithm what it means to be fat: machine-learning as a model for cultural learning." Please cite this repository or paper if reused. Code written in Python 3 in Windows.* 
 
 This project explores **how language in the news is loaded with meanings of gender, morality, healthiness, and socio-economic status (SES)**. For example, which words are more masculine or feminine? Are certain words loaded with meanings of immorality or morality? 
 
@@ -10,9 +10,9 @@ Finally, we examine language about body weight, such as "obese" and "slender,"  
 
 We include three possible modeling frameworks for modeling these dimensions (in parts B, C, and D). Developing three unique models enables us to check to robustness of our assumptions and empirical findings. We also include multiple other robustness checks along the way. 
 
-For all modeling frameworks, we feed in a trained Word2Vec model on New York Times (in the code, you be pointed to where to download). In the Jupyter notebook for each of Part B, C and D, we also suggest a pre-trained model on GoogleNews. See [Part A](https://github.com/arsena-k/Word2Vec-bias-extraction) of this project for a tutorial on training and exploring your own Word2Vec model. If you are unfamiliar with text analysis or Word2Vec, start with Part A. 
+For all modeling frameworks, we feed in a Word2Vec model trained New York Times articles about health and body weight. In the Jupyter notebooks, we also suggest a pre-trained model on GoogleNews; we find that the conclcusions in our research are largely the same whether we use a model trained on GoogleNews or the New York Times. See [Part A](https://github.com/arsena-k/Word2Vec-bias-extraction) of this project for a tutorial on training and exploring your own Word2Vec model. If you are unfamiliar with text analysis or Word2Vec, start with Part A. 
 
-## Part A:  Modeling Language with Word2Vec: Train a Word2Vec Model
+## Part A:  Modeling Language with Word2Vec: Train and Explore a Word2Vec Model
 Files needed from this repo:
 * Part_A_W2V_training_performance_exploring.ipynb
 * testing.py
@@ -22,7 +22,7 @@ Files needed from this repo:
 Files needed from [OSF](https://osf.io/jvarx/files/):
 * modelA_ALLYEARS_500dim_10CW
 
-**Description:** In Part A, we train a Word2Vec model of text data using Gensim.  Word2Vec models words in a text dataset as numeric vectors. For a review of Word2Vec check out this [blog post](http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/). We also include code in this juputer notebook to evaluate model quality on the Google Analogy Test on any trained Word2Vec model, and explore any trained Word2Vec model.
+**Description:** In Part A, we train a Word2Vec model of text data using Gensim.  Word2Vec takes words (or phrases) in a text data set and models these as n-dimensional numeric vectors. With enough data, these vectors are meaningful; for example, words taht are mroe similar in meaning (like man and boy) will have similar vectors. For a review of Word2Vec check out this [blog post](http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/). We also include code in this juputer notebook to evaluate model quality on the Google Analogy Test on any trained Word2Vec model, and explore any trained Word2Vec model.
 
 ## Part B: Try an approach to measure bias inspired by Bolukbasi et al 2016
 Files needed from this repo:
