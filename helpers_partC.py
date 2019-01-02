@@ -269,7 +269,21 @@ def select_testing_set(testingset, yourmodelhere):
     print('\033[1m'+ "Number of test words in model vocabulary, out of 60: " + '\033[0m' + str(len(test_words)))
     return(test_word_list_checked, test_words, test_classes_checked, train_word_list_checked, train_words, train_classes)
     
-
+class subspaceselector:
+    def __init__(self, direction):
+        self.subspaceselection = direction
+        if direction=='gender':
+            self.pos_coded='Feminine'
+            self.neg_coded='Masculine'
+        if direction=='moral':
+            self.pos_coded='Moral'
+            self.neg_coded='Immoral'
+        if direction=='health':
+            self.pos_coded='Healthy'
+            self.neg_coded='Unhealthy'
+        if direction=='ses':
+            self.pos_coded='High SES'
+            self.neg_coded='Low SES'
 
 #a function to run cross-validation on the training words 
 def do_kfold(yoursubspace, yourmodelhere):
