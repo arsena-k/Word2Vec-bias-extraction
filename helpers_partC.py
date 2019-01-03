@@ -147,19 +147,19 @@ def select_training_set(trainingset, yourmodelhere): #options are: gender, moral
     neg_word_list_checked=[] #we'll check that these training words are actually in the Word2Vec vocabulary. If a word isn't in the vocabulary, it gets replaced with a generic corresponding to the same concept (see pos_word_replacement and neg_word_replacement, above)
     for i in pos_word_list:
         try:
-            pos_words.append(yourmodelhere[i])
+            pos_words.append(yourmodelhere.wv[i])
             pos_word_list_checked.append(i)
         except KeyError:
             #print(str(i) +  ' was not in this Word2Vec models vocab, and has been replaced with: ' + str(pos_word_replacement) ) #uncomment this to be alerted each time a pos training word-vector is replaced
-            pos_words.append(yourmodelhere[pos_word_replacement])
+            pos_words.append(yourmodelhere.wv[pos_word_replacement])
             pos_word_list_checked.append(pos_word_replacement)
     for i in neg_word_list:
         try:
-            neg_words.append(yourmodelhere[i])
+            neg_words.append(yourmodelhere.wv[i])
             neg_word_list_checked.append(i)
         except KeyError:
             #print(str(i) +  ' was not in this Word2Vec models vocab, and has been replaced with: ' + str(neg_word_replacement) ) #uncomment this to be alerted each time a neg training word-vector is replaced
-            neg_words.append(yourmodelhere[neg_word_replacement])
+            neg_words.append(yourmodelhere.wv[neg_word_replacement])
             neg_word_list_checked.append(neg_word_replacement)
 
     print('\033[1m' + "Number of pos train words: "+ '\033[0m' + str(len(pos_words)) + '\033[1m' + " Number of neg train words: " + '\033[0m' + str(len(neg_words)) )
@@ -251,7 +251,7 @@ def select_testing_set(testingset, yourmodelhere):
     test_classes_checked=[] 
     for i in test_word_list:
         try:
-            test_words.append(yourmodelhere[i])
+            test_words.append(yourmodelhere.wv[i])
             test_word_list_checked.append(i)
             test_classes_checked.append(test_classes[test_word_list.index(i)]) 
         except KeyError:
@@ -259,7 +259,7 @@ def select_testing_set(testingset, yourmodelhere):
             #print(str(i) +  ' was not in this Word2Vec models vocab, and has been removed as a test word') #uncomment this to be alerted each time a test word is not included in your model's vocabulary
             #index_missing= test_word_list.index(i) #new
             #del(test_classes[index_missing]) 
-            #test_words.append(yourmodelhere[test_word_replacement])
+            #test_words.append(yourmodelhere.wv[test_word_replacement])
             #test_word_list_checked.append(test_word_replacement)
             #get index of word, and remove this from classes, and do not append to list of vectors and word-list
 

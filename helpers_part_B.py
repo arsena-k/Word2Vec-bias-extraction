@@ -154,19 +154,19 @@ def select_training_set(trainingset, yourmodelhere): #options are: gender, moral
     neg_word_list_checked=[] #we'll check that these training words are actually in the Word2Vec vocabulary. If a word isn't in the vocabulary, it gets replaced with a generic corresponding to the same concept (see pos_word_replacement and neg_word_replacement, above)
     for i in pos_word_list:
         try:
-            pos_words.append(yourmodelhere[i])
+            pos_words.append(yourmodelhere.wv[i])
             pos_word_list_checked.append(i)
         except KeyError:
             #print(str(i) +  ' was not in this Word2Vec models vocab, and has been replaced with: ' + str(pos_word_replacement) ) #uncomment this to be alerted each time a training word doesn't exist in your model vocab and is replaced with a generic version represnting the same concept
-            pos_words.append(yourmodelhere[pos_word_replacement])
+            pos_words.append(yourmodelhere.wv[pos_word_replacement])
             pos_word_list_checked.append(pos_word_replacement)
     for i in neg_word_list:
         try:
-            neg_words.append(yourmodelhere[i])
+            neg_words.append(yourmodelhere.wv[i])
             neg_word_list_checked.append(i)
         except KeyError:
             #print(str(i) +  ' was not in this Word2Vec models vocab, and has been replaced with: ' + str(pos_word_replacement) ) #uncomment this to be alerted each time a training word doesn't exist in your model vocab and is replaced with a generic version represnting the same concept
-            neg_words.append(yourmodelhere[neg_word_replacement])
+            neg_words.append(yourmodelhere.wv[neg_word_replacement])
             neg_word_list_checked.append(neg_word_replacement)
 
     print("Number of pos training words: " + str(len(pos_words)) + " Number of neg training words: " + str(len(neg_words)))
@@ -181,10 +181,10 @@ def select_training_set(trainingset, yourmodelhere): #options are: gender, moral
 def MEAN_get_directionVec_unipolar(words, yourmodelhere, train_index_list=None):
     if train_index_list is not None:
         Ndiff=len(words[train_index_list])
-        biggie2= np.reshape(words[train_index_list], (Ndiff,len(yourmodelhere['word']))) #now a Ndiff by #dimensions, menasured by len(yourmodelhere['word']), matrix, can check with print(biggie2.shape)
+        biggie2= np.reshape(words[train_index_list], (Ndiff,len(yourmodelhere.wv['word']))) #now a Ndiff by #dimensions, menasured by len(yourmodelhere.wv['word']), matrix, can check with print(biggie2.shape)
     else:
         Ndiff= len(words) 
-        biggie2= np.reshape(words, (Ndiff,len(yourmodelhere['word']))) #now a Ndiff by #dimensions, menasured by len(yourmodelhere['word']), matrix, can check with print(biggie2.shape)
+        biggie2= np.reshape(words, (Ndiff,len(yourmodelhere.wv['word']))) #now a Ndiff by #dimensions, menasured by len(yourmodelhere.wv['word']), matrix, can check with print(biggie2.shape)
     biggie2= preprocessing.normalize(biggie2, norm='l2')
 
     all_vecs_mat= [] 
@@ -192,7 +192,7 @@ def MEAN_get_directionVec_unipolar(words, yourmodelhere, train_index_list=None):
         all_vecs_mat.append(biggie2[i,:])
         
     direction = np.mean(all_vecs_mat,0)
-    assert direction.shape == (len(yourmodelhere['word']),)
+    assert direction.shape == (len(yourmodelhere.wv['word']),)
     extracteddirectionVec= np.hstack(normalizeME(direction)) #ensure normalized 
     return(extracteddirectionVec)
     
@@ -213,7 +213,7 @@ def PCA_get_directionVec(pos_words, neg_words, yourmodelhere, train_index_list=N
             biggie.append(i-j) #get difference vector for a specific word-pair here
         Ndiff= len(pos_words)
     
-    biggie2= np.reshape(biggie, (Ndiff,len(yourmodelhere['word']))) #now a Ndiff by #dimensions, menasured by len(yourmodelhere['word']), matrix, can check with print(biggie2.shape)
+    biggie2= np.reshape(biggie, (Ndiff,len(yourmodelhere.wv['word']))) #now a Ndiff by #dimensions, menasured by len(yourmodelhere['word']), matrix, can check with print(biggie2.shape)
     biggie2= preprocessing.normalize(biggie2, norm='l2')
     #print(np.linalg.norm(biggie2[0], ord=2)) #a check to make sure vector is normalized in case this was not done in pre-processing of word-vectors, should be length of 1 
 
@@ -239,7 +239,7 @@ def PCA_get_directionVec(pos_words, neg_words, yourmodelhere, train_index_list=N
         #print(i[0])
     matrix_w = eig_pairs[0][1].reshape(Ndiff,1) #this vector represents a "direction" of pos-neg words
     direction = matrix_w.T.dot(biggie2)  #multiply transpose of this e-vect (principal component) by whole dataset of genderdiffs to get a "gender" direction. for projection inner dimensions must match for dot product
-    assert direction.shape == (1,len(yourmodelhere['word'])) #a dimension check to make sure this direction is the same dimensions as a word-vector in the model
+    assert direction.shape == (1,len(yourmodelhere.wv['word'])) #a dimension check to make sure this direction is the same dimensions as a word-vector in the model
     extracteddirectionVec= np.hstack(normalizeME(direction)) 
     return(extracteddirectionVec, ordered_eig_values)
     
@@ -386,7 +386,7 @@ def select_testing_set(testingset, yourmodelhere):
     test_classes_checked=[] 
     for i in test_word_list:
         try:
-            test_words.append(yourmodelhere[i])
+            test_words.append(yourmodelhere.wv[i])
             test_word_list_checked.append(i)
             test_classes_checked.append(test_classes[test_word_list.index(i)]) #new
         except KeyError:
@@ -394,7 +394,7 @@ def select_testing_set(testingset, yourmodelhere):
             #print(str(i) +  ' was not in this Word2Vec models vocab, and has been removed as a test word')
             #index_missing= test_word_list.index(i)
             #del(test_classes[index_missing])
-            #test_words.append(yourmodelhere[test_word_replacement])
+            #test_words.append(yourmodelhere.wv[test_word_replacement])
             #test_word_list_checked.append(test_word_replacement)
             #get index of word, and remove this from classes, and do not append to list of vectors and word-list
 
@@ -487,7 +487,7 @@ def do_projections(subspace, new_word_list, yourmodelhere, method):
     if new_word_list is not None:
         if mode(pos_class)==1:  #this is learned from the training set
             for word in range(0, len(new_word_list)):
-                wordToProject=np.hstack(normalizeME(yourmodelhere[new_word_list[word]]))
+                wordToProject=np.hstack(normalizeME(yourmodelhere.wv[new_word_list[word]]))
                 proj=project(wordToProject, directionVec)
                 projections_new_word_list.append(proj)
                 if proj > 0:
@@ -496,7 +496,7 @@ def do_projections(subspace, new_word_list, yourmodelhere, method):
                     predictions_new_word_list.append(0)
         elif mode(pos_class)==0:
             for word in range(0, len(new_word_list)):
-                wordToProject=np.hstack(normalizeME(yourmodelhere[new_word_list[word]]))
+                wordToProject=np.hstack(normalizeME(yourmodelhere.wv[new_word_list[word]]))
                 proj=project(wordToProject, directionVec)
                 projections_new_word_list.append(-(proj))
                 if proj > 0:
