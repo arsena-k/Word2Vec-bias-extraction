@@ -16,13 +16,13 @@ import matplotlib.pyplot as plt
 
 def normalizeME(vec):
     b= vec.reshape(-1,1)
-    c=b/np.linalg.norm(b, ord=2) 
+    c=b/np.linalg.norm(b)  #ord=2
     #print np.linalg.norm(1)
     return c
     
 def project(A,B): #projection of A onto B
     numerator= A.dot(B) #should be a scalar
-    denominator= np.linalg.norm(B,1) #should be another scalar
+    denominator= np.linalg.norm(B) #should be another scalar #1
     scalarproject = numerator / denominator #divide numerator by denominator, this gives you the scalar projection (length, or magnitude) of a onto b
     return scalarproject
 
@@ -528,7 +528,7 @@ def do_kfold(yoursubspace, yourmodelhere, method):
         elif method=='larsen':
             directionVec= MEAN_get_directionVec_differences(pos_words, neg_words, yourmodelhere, train_index_list=train_index)
         else:
-            print('select a methodt to extract a dimension: bolukbasi or larsen')
+            print('select a method to extract a dimension: bolukbasi or larsen')
         pos_class=[] 
         for word in range(0, len(train_classes_pos[train_index])): #for word in this set of training words
             wordToProject=np.hstack(normalizeME(pos_words[train_index][word]))
