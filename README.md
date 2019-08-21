@@ -26,7 +26,7 @@ Files needed from [OSF](https://osf.io/jvarx/files/):
 
 ## Part B: Two geometric approaches to Classify Words, inspired by [Bolukbasi et. al. 2016](https://arxiv.org/abs/1607.06520) and [Larsen et. al. 2016](https://arxiv.org/abs/1512.09300?context=cs)
 
-Files needed from this repo:
+Files needed from this repo:  **8.21.2019 NOTE TO SELF: CHANGE THIS!!**
 * Part_B_BolukbasiLarsen_W2V_Dimension_Extraction.ipynb
 * helpers_partB.py
 
