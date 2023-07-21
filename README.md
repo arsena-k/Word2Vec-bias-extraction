@@ -1,6 +1,8 @@
 # Word2Vec-bias-extraction
 
-*GitHub repository to accompany research paper in preparation by Alina Arseniev-Koehler and Jacob G. Foster, "Machine learning as a model for cultural learning: teaching an algorithm what it means to be fat." Preprint available at: https://osf.io/preprints/socarxiv/c9yj3/ Please cite this repository or paper if reused. Code written in Python 3 in Windows and Gensim 3.* 
+*GitHub repository to accompany research paper in preparation by Alina Arseniev-Koehler and Jacob G. Foster, "Machine learning as a model for cultural learning: teaching an algorithm what it means to be fat." Published in Sociological Methods & Research and available at: https://journals.sagepub.com/doi/full/10.1177/00491241221122603 
+
+Please cite this repository or paper if reused. Code written in Python 3 in Windows and Gensim 3.* 
 
 This research examines how **news reporting on body weight and health is loaded with meanings of gender, morality, health, and socio-economic status (SES)**. For example, is "overweight" more masculine or feminine? What about "slender," and "obese"? As described in our paper, qualtiative work suggests that obesity connotes immorality, unhealthiness, low SES, and is considered more problematic for women than for men. 
 
